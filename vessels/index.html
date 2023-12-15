@@ -1,0 +1,583 @@
+<!-- 
+__     _______ ____ ____  _____ _     ____  
+\ \   / / ____/ ___/ ___|| ____| |   / ___| 
+ \ \ / /|  _| \___ \___ \|  _| | |   \___ \ 
+  \ V / | |___ ___) |__) | |___| |___ ___) |
+   \_/  |_____|____/____/|_____|_____|____/
+    -->
+<!-- Thankyou, Tigo -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Primary Meta Tags -->
+  <meta http-equiv="Cache-Control" content="max-age=0">
+  <!-- Primary Meta Tags -->
+  <title>vessels</title>
+  <meta name="title" content="vessels" />
+  <meta name="description" content="" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="vessels" />
+  <meta property="og:description" content="" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="vessels" />
+  <meta property="twitter:description" content="" />
+  <meta property="twitter:image" content="/vessels/assets/image/thumb.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <link rel="shortcut icon" href="/assets/image/global/favicon.ico">
+  <link href="/assets/css/vessels.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/css/mq.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/css/theme/koyo.css" rel="stylesheet" type="text/css" media="all" id="main-stylesheet">
+  <style>
+    a:hover {
+      opacity: 80%;
+    }
+
+    img {
+      pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        width: 100%;
+        height: 50%;
+      }
+
+      section {
+        width: 80%;
+        left: 10%;
+      }
+
+      button {
+        height: 200%;
+      }
+    }
+
+    .static {
+      background-image: url(/vessels/assets/image/static.png);
+      z-index: 7;
+      opacity: 80%;
+    }
+
+    .flicker {
+      z-index: 6;
+      pointer-events: none;
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      animation: 0.05s linear infinite alternate flicker;
+    }
+
+    @keyframes flicker {
+      0% {
+        backdrop-filter: brightness(120%) contrast(110%);
+      }
+
+      100% {
+        backdrop-filter: brightness(97%) contrast(100%);
+      }
+    }
+
+    @keyframes vibrate {
+      0% {
+        transform: translate(0);
+      }
+
+      10% {
+        transform: translate(-2px, -2px);
+      }
+
+      20% {
+        transform: translate(2px, -2px);
+      }
+
+      30% {
+        transform: translate(-2px, 2px);
+      }
+
+      40% {
+        transform: translate(2px, 2px);
+      }
+
+      50% {
+        transform: translate(-2px, -2px);
+      }
+
+      60% {
+        transform: translate(2px, -2px);
+      }
+
+      70% {
+        transform: translate(-2px, 2px);
+      }
+
+      80% {
+        transform: translate(-2px, -2px);
+      }
+
+      90% {
+        transform: translate(2px, -2px);
+      }
+
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    @keyframes hover {
+      0% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(20px);
+      }
+    }
+
+    .saturate {
+      z-index: 5;
+      pointer-events: none;
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      backdrop-filter: saturate(477%) blur(0.5px);
+    }
+
+    .coloradjust {
+      z-index: 4;
+      pointer-events: none;
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #7b3434c4;
+      mix-blend-mode: multiply;
+    }
+
+    .contrastadjust {
+      z-index: 3;
+      pointer-events: none;
+      backdrop-filter: contrast(150%) saturate(0%);
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .matrix {
+      z-index: 2;
+      pointer-events: none;
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-image: url('/vessels/assets/image/softpixels.png');
+      background-size: 7px 7px;
+      background-attachment: fixed;
+      text-align: center;
+      mix-blend-mode: soft-light;
+    }
+
+    @keyframes wobble {
+
+      0%,
+      100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+      }
+
+      15% {
+        transform: translateX(-10px) rotate(-1deg);
+      }
+
+      30% {
+        transform: translateX(5px) rotate(1deg);
+      }
+
+      45% {
+        transform: translateX(-5px) rotate(-1deg);
+      }
+
+      60% {
+        transform: translateX(9px) rotate(1deg);
+      }
+
+      75% {
+        transform: translateX(-6px) rotate(-1deg);
+      }
+    }
+
+
+    @keyframes fade {
+
+      0%,
+      100% {
+        opacity: 32%;
+      }
+
+      15% {
+        opacity: 0%;
+      }
+
+      30% {
+        opacity: 32%;
+      }
+
+      45% {
+        opacity: 0%;
+      }
+
+      60% {
+        opacity: 32%;
+      }
+
+      75% {
+        opacity: 0%;
+      }
+    }
+
+    @keyframes fade2 {
+
+      0%,
+      100% {
+        opacity: 700%;
+      }
+
+      15% {
+        opacity: 30%;
+      }
+
+      30% {
+        opacity: 700%;
+      }
+
+      45% {
+        opacity: 40%;
+      }
+
+      60% {
+        opacity: 32%;
+      }
+
+      75% {
+        opacity: 100%;
+      }
+    }
+
+    .enter {
+      z-index: 8;
+      pointer-events: none;
+      position: fixed;
+      height: 1000%;
+      width: 1000%;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: black;
+    }
+
+    button:hover {
+      cursor: url('/vessels/assets/image/pointer.png'), pointer;
+    }
+
+    body {
+      cursor: url('/vessels/assets/image/cursor.png'), auto;
+    }
+
+    .hand {
+      animation: wobble 10s ease 0s infinite alternate forwards;
+    }
+
+    .hand2 {
+      animation: wobble 11s ease 0s infinite alternate forwards;
+    }
+
+    .hand3 {
+      animation: wobble 13s ease 0s infinite alternate forwards;
+    }
+
+    .fade {
+      animation: fade 60s ease 0s infinite alternate forwards;
+    }
+    .fade2{
+      animation: fade 10s ease 0s infinite alternate forwards;
+    }
+
+    .reverse {
+      transform: scaleX(-1);
+    }
+
+    .tilt {
+      transform: rotate(10deg);
+    }
+
+    .tilt2 {
+      transform: rotate(-10deg);
+    }
+
+    .twitch {
+      animation: wobble 1s linear 0s infinite alternate forwards;
+      animation: fade2 30s linear 0s infinite alternate forwards;
+    }
+
+    .vibrate {
+      animation: vibrate 0.5s ease 0s infinite alternate forwards;
+    }
+
+    .vibrate2 {
+      animation: vibrate 1.0s ease 0s infinite alternate forwards;
+    }
+
+    h2 {
+      letter-spacing: 1em;
+    }
+
+    /* Thankyou, Tigo. */
+  </style>
+</head>
+
+<body style="
+margin-top: 20%;
+user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  ">
+  <button id="listen" style="position: relative ;">
+    <h3
+      style=" color: white;z-index: 9; position: relative; font-family: jmh_typewriter-thin-webfont;   font-weight: bold; letter-spacing: 1em; position: relative; animation: hover 0s linear 0s infinite alternate forwards;">
+      Now is the time to listen.</h3>
+  </button>
+  <div class="enter" id="enter"></div>
+  <script>
+    var listen = document.getElementById("listen");
+    var enter = document.getElementById("enter");
+    var audio = new Audio('https://dl.dropbox.com/scl/fi/gkx65gk2t2smrpwahfli5/waves.wav?rlkey=4zujgfd8snwd5v9rzlvomezqc&dl=0');
+    listen.onclick = function () {
+      enter.style.display = 'none'
+      listen.style.display = 'none'
+      audio.play();
+      audio.volume = 0.5;
+      audio.loop = true;
+    };
+  </script>
+  <!-- <div class="static"></div> -->
+  <div class="flicker"></div>
+  <div class="saturate"></div>
+  <div class="coloradjust"></div>
+  <!-- <div class="contrastadjust"></div> -->
+  <div class="matrix"></div>
+  <section
+    style="position: relative; animation: vibrate 1.5s ease 0s infinite alternate forwards; pointer-events: none !important;">
+    <section
+      style="position: relative; animation: hover 4s linear 0s infinite alternate forwards; pointer-events: none !important;">
+      <section
+        style="position: relative; animation: wobble 10s ease 0s infinite alternate forwards; pointer-events: none !important;">
+        <img src="/vessels/assets/image/vessel.png" style="width: 50%; position: relative; z-index: 1; "></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; left: 25%; bottom: 60%; mix-blend-mode: luminosity"></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; left: 5%; bottom: 30%; mix-blend-mode: luminosity; transform: rotateX(0deg);"></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; right: 5%; bottom: 50%; mix-blend-mode: luminosity; transform: rotateX(-40deg);"></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; left: 25%; bottom: -22%; mix-blend-mode: luminosity; transform: rotateX(30deg);"></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; left: 5%; bottom: -22%; mix-blend-mode: luminosity; transform: rotateX(20deg);"></img>
+        <img class="fade" src="/vessels/assets/image/splatter.png"
+          style="width: 50%; position: absolute; z-index: 50; right: 5%; bottom: -22%; mix-blend-mode: luminosity; transform: rotateX(40deg);"></img>
+        <img class="hand2" src="/vessels/assets/image/h9.png"
+          style="position: absolute; width: 15%; left: 50%; bottom: 82%;"></img>
+        <img class="hand" src="/vessels/assets/image/h1.png"
+          style="position: absolute; width: 20%; left: 25%; bottom: 68%;"></img>
+        <img class="hand3" src="/vessels/assets/image/h2.png"
+          style="position: absolute; width: 20%; right: 24%; bottom: 82%;"></img>
+        <img class="hand" src="/vessels/assets/image/h3.png"
+          style="position: absolute; width: 20%; right: 18%; bottom: 70%;"></img>
+        <img class="hand3" src="/vessels/assets/image/h4.png"
+          style="position: absolute; width: 20%; left: 44%; bottom: 82%;"></img>
+        <img class="hand3" src="/vessels/assets/image/h5.png"
+          style="position: absolute; width: 18%; left: 30%; bottom: 65%;"></img>
+        <img class="hand2" src="/vessels/assets/image/h6.png"
+          style="position: absolute; width: 20%; left: 35%; bottom: 81%;"></img>
+        <img class="hand2" src="/vessels/assets/image/h7.png"
+          style="position: absolute; width: 20%; left: 24%; bottom: 22%;"></img>
+        <img class="hand2" src="/vessels/assets/image/h10.png"
+          style="position: absolute; width: 20%; right: 18%; bottom: 52%;"></img>
+        <img class="hand3" src="/vessels/assets/image/h8.png"
+          style="position: absolute; width: 20%; right: 20%; bottom: 22%;"></img>
+      </section>
+    </section>
+    <h2>Vessel</h2>
+  </section>
+  <section
+    style="position: relative; animation: vibrate 1.5s ease 0s infinite alternate forwards; pointer-events: none !important; margin-top: 20%;">
+    <section
+      style="position: relative; animation: hover 4s linear 0s infinite alternate forwards; pointer-events: none !important;">
+      <section
+        style="position: relative; animation: wobble 10s ease 0s infinite alternate forwards; pointer-events: none !important;">
+        <img src="/vessels/assets/image/blister.png" style="width: 50%; position: relative;"></img>
+        <img class="" id="holder" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 53.1%; bottom: 68%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 55%; bottom: 69%;"></img>
+        <img class="" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 47.5%; bottom: 68%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 49.4%; bottom: 69%;"></img>
+        <img class="reverse" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 50.5%; bottom: 71%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 52.4%; bottom: 72%;"></img>
+        <img class="reverse" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 50.5%; bottom: 62%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 52.4%; bottom: 63%;"></img>
+        <img class="tilt" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 47.5%; bottom: 64.5%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 49.4%; bottom: 65.5%;"></img>
+        <img class="reverse tilt2" src="/vessels/assets/image/e1.png"
+          style="position: absolute; width: 5%; right: 52.5%; bottom: 65%;"></img>
+        <img class="eye" src="/vessels/assets/image/eb.png"
+          style="position: absolute; width: 1.2%; right: 54.4%; bottom: 66%;"></img>
+        </img>
+      </section>
+    </section>
+    <h2>Blister</h2>
+  </section>
+
+  <section
+    style="position: relative; animation: vibrate 1.5s ease 0s infinite alternate forwards; pointer-events: none !important; margin-top: 35%;">
+    <section
+      style="position: relative; animation: hover 4s linear 0s infinite alternate forwards; pointer-events: none !important;">
+      <section
+        style="position: relative; animation: wobble 10s ease 0s infinite alternate forwards; pointer-events: none !important;">
+        <img src="/vessels/assets/image/wire.png" class="hand"
+          style="width: 30%; bottom: 300%; position: relative; padding-top: 15%;"></img>
+
+        <img class="" src="/vessels/assets/image/monitor.png"
+          style="position: absolute; width: 30%; left: 35%; top: -25%"></img>
+        </img>
+        <img class="twitch fade vibrate2" src="/vessels/assets/image/gaze.png"
+          style="position: absolute; width: 15%; right: 42%; bottom: 92%;"></img>
+        <img class="twitch hand3 vibrate2" src="/vessels/assets/image/eb2.png"
+          style="position: absolute; width: 9%; right: 45%; bottom: 93%;"></img>
+
+
+
+        <div style="transform: translateY(-23em);">
+          <div style="transform: rotate(30deg);">
+            <img class="hand2 hand3 vibrate" src="/vessels/assets/image/architect.gif"
+              style="position: absolute; width: 35%; left: 65%; bottom: 0%;"></img>
+          </div>
+          <div style="transform: translateY(-8.5em);">
+            <div style="transform: rotate(-45deg);">
+              <img class="hand3 hand vibrate" src="/vessels/assets/image/architect.gif"
+                style="position: absolute; width: 35%; left: 0%; bottom: 0%;"></img>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <h2>Veil</h2>
+  </section>
+
+  <section
+  style="position: relative; animation: vibrate 1.5s ease 0s infinite alternate forwards; pointer-events: none !important; margin-top: 35%; margin-bottom: 10em;">
+  <section
+    style="position: relative; animation: hover 4s linear 0s infinite alternate forwards; pointer-events: none !important; width: 350%; left: -135%; height: 20em;">
+    <img class="hand2" src="/vessels/assets/image/horn.png"
+    style="width: 15%; position: absolute; z-index: 50; left: 34%; bottom: 100%;"></img>
+    <img class="hand2" src="/vessels/assets/image/horn2.png"
+    style="width: 15%; position: absolute; z-index: 50; left: 52%; bottom: 100%;"></img>
+    
+    </div>
+    <img class="hand2" src="/vessels/assets/image/grip.png"
+    style="width: 30%; position: absolute; z-index: 0; left: -8%; bottom: 47%;"></img>
+    <img class="hand" src="/vessels/assets/image/mask1.png"
+        style="position: absolute; width: 30%; left: 0%; top: -25%"></img>
+        <img class="twitch fade vibrate2" src="/vessels/assets/image/ring.png"
+        style="position: absolute; width: 40%; right: -5%; bottom: 70%;"></img>
+
+      <img class="hand2" src="/vessels/assets/image/mask2.png"
+        style="position: absolute; width: 33%; left: 34%; top: -25%"></img>
+      </img>
+      <img class="twitch fade vibrate2" src="/vessels/assets/image/fangs.png"
+        style="position: absolute; width: 15%; right: 42%; bottom: 25%;"></img>
+        <img class="hand3" src="/vessels/assets/image/mask3.png"
+        style="position: absolute; width: 30%; left: 70%; top: -25%"></img>
+        <img class="twitch fade vibrate2" src="/vessels/assets/image/angel2.png"
+        style="position: absolute; width: 18%; right: 0%; bottom: 70%;"></img>
+        <img class="twitch fade vibrate2" src="/vessels/assets/image/angel1.png"
+        style="position: absolute; width: 18%; right: 11%; bottom: 70%;"></img>
+      </img>
+      <img class="twitch fade vibrate2" src="/vessels/assets/image/gaze1.gif"
+      style="position: absolute; width: 11%; right: 86%; bottom: 70%;"></img>
+      <img class="twitch fade vibrate2" src="/vessels/assets/image/gaze2.gif"
+      style="position: absolute; width: 11%; right: 75%; bottom: 70%;"></img>
+      <img class="fade2" src="/vessels/assets/image/splatter.png"
+      style="width: 50%; position: absolute; z-index: 50; left: 25%; bottom: 0%; mix-blend-mode: luminosity"></img>
+
+      </div>
+
+  </section>
+  <h2>Trinity</h2>
+</section>
+
+<script data-goatcounter="https://koyo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    const anchor = document.getElementById("holder")
+    const rekt = anchor.getBoundingClientRect();
+    const anchorX = rekt.left + rekt.width / 2;
+    const anchorY = rekt.top + rekt.height / 2;
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX
+      const mouseY = e.clientY
+
+
+      const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+
+      const eyes = document.querySelectorAll('.eye')
+      eyes.forEach(eye => {
+        eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+      })
+    })
+    function angle(cx, cy, ex, ey) {
+      const dy = ey - cy;
+      const dx = ex - cx;
+      const rad = Math.atan2(dy, dx);
+      const deg = rad * 180 / Math.PI;
+      return deg;
+    }
+  </script>
+
+</body>
+
+</html>

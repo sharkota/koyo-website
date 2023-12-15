@@ -1,0 +1,17 @@
+/*Theme*/
+:root {
+    --primary-color:#212121;
+    --secondary-color: #151515;
+    --tertiary-color: #1a1a1a;
+    --text-color: white;
+    --highlight-color: var(--accent-active);
+    --accent-inactive: #929292;
+    --accent-active: #dcdcdc;
+    --link-color: var(--accent-active);
+    --header: white;
+    --quote-background: #d8d8d80f;
+}
+body{
+    background-color: #101010;
+    /* background: url(/assets/image/global/wood.png) center fixed; background-size: 100%; */
+}

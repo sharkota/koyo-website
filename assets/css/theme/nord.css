@@ -1,0 +1,13 @@
+/*Theme*/
+:root {
+    --primary-color:#3B4252;
+    --secondary-color: #4C566A;
+    --tertiary-color: #2E3440;
+    --text-color: white;
+    --highlight-color: var(--accent-active);
+    --accent-inactive: #81A1C1;
+    --accent-active: #5E81AC;
+    --link-color: var(--accent-active);
+    --header: white;
+    --quote-background: #3bdd9f0f;
+}

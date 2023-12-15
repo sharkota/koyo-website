@@ -1,0 +1,531 @@
+/* Koy19 Master CSS
+Hewwo fren!!! */
+
+/* Fonts */
+
+@font-face {
+  font-family: 'jmh_typewriter-thin-webfont';
+  src: url('/assets/font/jmh_typewriter-thin-webfont.woff2') format('woff2'),
+       url('/assets/font/jmh_typewriter-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes scanlines {
+  0% {
+      background-position: 50% 0%;
+  }
+
+  100% {
+      background-position: 50% 100%;
+  }
+}
+
+.scanlines {
+  animation: scanlines 1s ease 0s infinite normal back;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  background-image: url(/assets/image/global/scanlines.png);
+  opacity: 3.73%;
+  filter: blur(0.1em);
+  pointer-events: none;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.static{
+  animation: scanlines 18000s infinite normal forwards;
+  width: 100000%;
+  position: absolute;
+  z-index: -1;
+  height: 100000%;
+  background-image: url(/assets/image/global/grid.png);
+  opacity: 50%;
+  filter: blur(0.2em);
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Normal Elements */
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  font-family: jmh_typewriter-thin-webfont, Arial, Tahoma, sans-serif;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--link-color);
+  transition: ease 0.2s;
+}
+
+a h2:hover,
+a h3:hover,
+a h4:hover,
+a h5:hover,
+a h6:hover,
+p a:hover,
+li a:hover,
+.buttonCon a:hover {
+  opacity: 30%;
+}
+
+p{
+  text-align: justify;
+  text-indent: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--header);
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+a h1,
+h2,
+h3,
+h4,
+h5 {
+  color: inherit;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin: 1.411rem 0rem 1.411rem 0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+  color: var(--accent-active)
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+h6 {
+  font-size: 0.5rem;
+}
+
+ul {
+  line-height: 2rem;
+  margin: .5rem;
+  padding: 0rem;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  word-wrap: break-word;
+  list-style-type: none;
+}
+
+li::before {
+  content: "â—Š ";
+}
+
+li{
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  width: 0%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+article{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.post{
+  width: 100%;
+}
+
+th, td{
+  border-right: 5px solid var(--accent-active);
+  border-left: 5px solid var(--accent-active);
+  border-bottom: 5px solid var(--quote-background);
+}
+
+th{
+  border-bottom: 5px solid var(--accent-active);
+}
+/* look i just fucking hate tables dont do the messy workaround i did */
+.tablefoot{
+  border-bottom: 5px solid var(--accent-active);
+}
+
+thead,
+ tfoot {
+    background-color: transparent;
+}
+
+tbody {
+    background-color: transparent;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 5px solid var(--accent-active);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    margin: 5% 0% 5% 0%;
+    table-layout: fixed;
+    width: 100%;
+    line-height: 100%;
+    font-size: .8em;
+}
+
+td,
+th {
+padding-right: .5em;
+padding-left: .5em;
+overflow:hidden;
+}
+
+td {
+    text-align: center;
+}
+
+label{
+  font-size: 1.3rem;
+}
+
+/* Custom Elements */
+
+.navButton {
+  text-decoration: none;
+  transition: ease 0.2s;
+}
+
+.navButton h2{
+  margin-left: 0.5em;
+}
+
+.sidebar {
+  height: fit-content;
+  margin: 1.3rem;
+  width: 20rem;
+  word-wrap: break-word;
+  animation: slide-left 1s ease 0s 1 reverse none;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1em;
+  background-color: var(--secondary-color);
+}
+
+.topbar{
+  height: fit-content;
+  margin: 1.3rem;
+  word-wrap: break-word;
+  animation: slide-left 1s ease 0s 1 reverse none;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1em;
+  background-color: var(--secondary-color);
+}
+
+.windowCon{
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1em;
+  background-color: var(--primary-color);
+  z-index: 100111;
+}
+
+.windowBar {
+  border: .5rem solid;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  min-height: 3em;
+  max-height: 3em;
+  min-width: fit-content;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  display: flex;
+  flex: 80%;
+}
+
+.windowBar p{
+  margin-left: -1.9em;
+  margin-right: 0em;
+  margin-top: 1.39em;
+  margin-bottom: 0em;
+}
+
+.windowMain {
+  border: .5rem solid;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+.windowIcon{
+  filter: invert(100%);
+  height: 1em;
+  margin-right: 0.3em;
+}
+
+.windowTitle{
+  font-size: 1.3em;
+  display: flex;
+  max-height: 3em;
+  margin-right: 1em;
+}
+
+.windowButtons{
+  text-align: right;
+  flex: 70%;
+}
+
+.windowButtonSVG{
+  fill: var(--accent-active);
+}
+
+.squish{
+  width: 80%;
+}
+
+.starred::after{
+  content: "âœ¨";
+  font-size: .8em;
+}
+
+.card {
+  background: var(--primary-color);
+  margin: 0em 1em 0em 0em;
+  border: .5rem solid;
+  border-color: var(--accent-active);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.column {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.imgPFP {
+  width: 10rem;
+  height: 10rem;
+  margin: 5%;
+  border-radius: 50%;
+  border: 0.3rem solid var(--accent-active);
+}
+
+.imgBanner {
+  width: 80%;
+  margin: 2%;
+  border: 0.3rem solid var(--accent-active);
+}
+
+.photo {
+  max-width: 40rem;
+  max-height: 50rem;
+  border: 1em solid var(--tertiary-color);
+  margin-bottom: 1em;
+}
+
+.polaroid {
+  width: 10em !important;
+  height: 15em !important;
+  margin: .8em;
+  padding: 1em;
+  background-color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.polaroid:hover {
+  animation: pulse 2s ease 0s 1 normal forwards;
+}
+
+.collapse{
+  display: none;
+}
+
+.dropDown{
+  cursor: pointer;
+  line-height: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.dropDown:Before{
+  content: "> ";
+}
+
+input:checked ~  .dropDown:before{
+  content: "â‹ ";
+}
+
+input:checked ~  .collapse{
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.album {
+  width: 10em;
+  height: 10em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.polaroid{
+  letter-spacing: 0;
+}
+
+.polaroid h3 {
+  color: var(--text-color);
+}
+
+.button {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+}
+
+.highlight{
+  color: var(--highlight-color)
+}
+
+.quote {
+  max-width: 50em;
+  border: .2rem solid;
+  border-radius: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: var(--text-color);
+  border-color: var(--accent-active);
+  background-color: var(--quote-background);
+}
+
+.quote p {
+  margin: 1em;
+}
+
+.noDecoration {
+  text-decoration: none;
+}
+
+.buttonCon {
+  max-width: 50%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+section.date h1,
+h5 {
+  margin-right: 1%;
+  margin-bottom: 0%;
+}
+
+/* JS */
+.show {
+  display: none;
+}
+
+/* Animations */
+
+/* @keyframes nav {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+@keyframes slide-top {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes slide-left {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100px);
+	}
+} */

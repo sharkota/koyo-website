@@ -1,0 +1,416 @@
+/* Koy19 Master CSS
+Hewwo fren!!! */
+
+/* Fonts */
+@font-face {
+  font-family: 'comfortaa';
+  src: url('/assets/font/comfortaa-regular-webfont.woff2') format('woff2'),
+    url('/assets/font/comfortaa-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --js: flex;
+  --jsButton: none;
+}
+
+/* Normal Elements */
+
+body {
+  background-image: var(--bg-img);
+  background-attachment: fixed;
+  background-position: right bottom;
+  background-size: cover;
+  background-color: var(--primary-color);
+  /* background-image: url(/assets/image/photography/lake.jpg); */
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: comfortaa, Geneva, Tahoma, sans-serif;
+  margin: 3%;
+  justify-content: center;
+  transition-duration: 0.5s;
+  overflow-x: hidden;
+}
+
+id {
+  scroll-margin-top: 100vh;
+}
+
+.blog>img,
+video,
+iframe {
+  width: 80%;
+  align-self: center;
+  border: 1em solid var(--tertiary-color);
+  margin: 1rem;
+}
+
+hr {
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--accent-active);
+  border: none;
+}
+
+nav hr {
+  opacity: 0%;
+}
+
+a h2:hover,
+a h3:hover,
+a h4:hover,
+a h5:hover,
+a h6:hover,
+p a:hover,
+li a:hover,
+nav a:hover,
+.button:hover {
+  opacity: 30%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--header);
+}
+
+a h1,
+h2,
+h3,
+h4,
+h5 {
+  color: inherit;
+}
+
+h1 {
+  font-size: 3.7rem;
+  margin: 1.411rem 0rem 1.411rem 0rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.17rem;
+  color: var(--accent-active)
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p,
+li,
+a {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+a{
+  color: var(--link-color);
+}
+
+ul {
+  line-height: 2rem;
+  margin: .5rem;
+  padding: 0rem;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  word-wrap: break-word;
+  list-style-type: none;
+  text-align: left;
+}
+
+li::before {
+  content: "⯁ ";
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.1rem;
+  background-color: var(--secondary-color)
+    /* or add it to the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-active);
+}
+
+main {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  min-width: 60%;
+  text-align: center;
+  animation: slide-top 1s ease 0s 1 reverse none;
+}
+
+footer {
+  margin: 1%;
+}
+
+footer>svg {
+  width: 80%;
+}
+
+svg>g {
+  fill: var(--accent-active);
+}
+
+section {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  animation: fade-in 1s ease 0s 1 normal forwards;
+}
+
+th,
+td {
+  border-right: 5px solid var(--accent-active);
+  border-left: 5px solid var(--accent-active);
+  border-bottom: 5px solid var(--quote-background);
+}
+
+th {
+  border-bottom: 5px solid var(--accent-active);
+}
+
+/* look i just fucking hate tables dont do the messy workaround i did */
+.tablefoot {
+  border-bottom: 5px solid var(--accent-active);
+}
+
+thead,
+tfoot {
+  background-color: transparent;
+}
+
+tbody {
+  background-color: transparent;
+}
+
+caption {
+  padding: 10px;
+  caption-side: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border: 5px solid var(--accent-active);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  margin: 5% 0% 5% 0%;
+  table-layout: fixed;
+  width: 100%;
+  line-height: 100%;
+  font-size: .8em;
+}
+
+td,
+th {
+  padding-right: .5em;
+  padding-left: .5em;
+  overflow: hidden;
+}
+
+td {
+  text-align: center;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+article {
+  border-top: 0.5rem solid;
+  border-color: var(--accent-active);
+  width: 70%;
+  flex-direction: column;
+  display: flex;
+}
+
+/* Custom Elements */
+
+.selected:before {
+  visibility: visible;
+}
+
+button:hover {
+  opacity: 30%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-active);
+  text-align: left;
+  text-decoration: none;
+  font-family: comfortaa, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+nav a,
+button {
+  text-decoration: none;
+  transition: ease 0.2s;
+  font-size: 2.17rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  margin-left: 1rem;
+  padding: 0%;
+  background-color: transparent;
+}
+
+button {
+  display: var(--jsButton);
+}
+
+nav a:before,
+button:before {
+  content: ">  ";
+  visibility: hidden;
+}
+
+.return:before {
+  content: "↩  ";
+  visibility: visible;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--secondary-color);
+  width: 2.79rem;
+  overflow: hidden;
+  height: 100%;
+  word-wrap: break-word;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  animation: slide-left 1s ease 0s 1 reverse none;
+  transition-duration: 0.5s;
+}
+
+nav:hover {
+  width: 20rem;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+
+main+nav {
+  animation: slide-right 1s ease 0s 1 reverse none;
+  position: fixed;
+  right: 0;
+}
+
+nav:not(main + nav) {
+  left: 0;
+}
+
+.gallery {
+  column-count: 4;
+  column-gap: 2%;
+  display: block;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 5%;
+}
+
+.starred::after {
+  content: "✨";
+  font-size: .8em;
+}
+
+.buttonLink img {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+}
+
+.buttonLink:hover {
+  opacity: 30%;
+}
+
+.buttonLink {
+  text-decoration: none;
+  margin: 0;
+}
+
+/* JS */
+.show {
+  display: var(--js);
+}
+
+/* Animations */
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

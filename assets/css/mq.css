@@ -1,0 +1,42 @@
+@media (max-width: 900px){
+    p,h1,h2,h3,h4,h5,a, li{
+        font-size: 100%
+    }
+    button, nav a{
+        font-size: 2rem;
+        align-self: center;
+        margin: 0;
+    }
+    nav a:before,
+    button:before {
+      content: "";
+      visibility: hidden;
+    }
+    article{
+        width: 90%;
+    }
+    li::before {
+        content: "◊";
+      }
+      .return:before {
+        content: "←  ";
+        visibility: visible;
+      }
+    nav{
+        align-items: center;
+        text-align: center;
+    }
+    nav, main{
+        width: 100vw;
+        position: relative;
+        min-width: 100%;
+    }
+    nav:hover{
+        width: 100vw;
+    }
+    body{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+   }
