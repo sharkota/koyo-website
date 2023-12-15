@@ -1,2 +1,2 @@
 # koyo-website
-wip
+Source code for https://koyo.neocities.org
