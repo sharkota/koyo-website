@@ -1,5 +1,11 @@
-const lazyImage = document.querySelectorAll(".gallery img");
+// const galleryImg = document.querySelectorAll(".gallery img");
+// const blogImg = document.querySelectorAll(".blog img")
+const all = document.querySelectorAll("img")
 
-for (let I = 0; I < lazyImage.length; I++) {
-    lazyImage[I].setAttribute("loading", "lazy");
+function applyLazy(varName) {
+    for (let I = 0; I < varName.length; I++) {
+        varName[I].setAttribute("loading", "lazy");
+    }
 }
+
+applyLazy(all)
