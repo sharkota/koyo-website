@@ -326,6 +326,12 @@ nav:hover {
   transition-property: all;
 }
 
+.navTabFix{
+  width: 20rem;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+
 main+nav {
   animation: slide-right 1s ease 0s 1 reverse none;
   position: fixed;
