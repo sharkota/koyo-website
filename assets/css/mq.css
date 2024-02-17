@@ -6,6 +6,7 @@
         font-size: 2rem;
         align-self: center;
         margin: 0;
+        margin-bottom: 0.2em;
     }
     nav a:before,
     button:before {
@@ -38,5 +39,8 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
+    }
+    .system{
+        scale: 0.5;
     }
    }

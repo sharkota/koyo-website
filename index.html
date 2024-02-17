@@ -18,6 +18,7 @@
     <link href="/assets/css/master.css" rel="stylesheet" type="text/css" media="all">
     <link href="/assets/css/theme/paranoid.css" rel="stylesheet" type="text/css" media="all" id="theme">
     <link href="/assets/css/mq.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/snippets.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
@@ -25,6 +26,7 @@
         <span id="mainNav">
             <a href="#Home">Home</a>
             <a href="#Projects">Projects</a>
+            <a class="starred" href="#Snippets">Snippets</a>
             <a href="#Photography">Photos</a>
             <a href="#Buttons">Buttons</a>
             <a href="#Changelog">Changelog</a>
@@ -33,7 +35,7 @@
             <a href="https://neocities.org/site/koyo">Neocities</a>
             <a href="mailto:dakotashi17@gmail.com">Email Me</a>
             <a href="https://bigrat.monster">Manifesto</a>
-            <button onclick="toggleThemePicker()">Theme</button>
+            <button class="starred" onclick="toggleThemePicker()">Theme</button>
         </span>
         <span class="show" id="themeNav">
             <button onclick="toggleTheme('koyo')">Koyo</button>
@@ -44,6 +46,8 @@
             <button onclick="toggleTheme('ermine')">Ermine</button>
             <button onclick="toggleTheme('apotheosys')">Apotheosys</button>
             <button onclick="toggleTheme('none')">Flashbang</button>
+            <button class="starred" onclick="toggleTheme('garden')">Garden</button>
+            <button class="starred" onclick="toggleTheme('dragon')">Dragon</button>
             <button class="return" onclick="toggleThemePicker()">Back</button>
         </span>
     </nav>
@@ -57,6 +61,118 @@
                 <p>A website for listing and sharing my creative projects.</p>
                 <p>Hover over the sidebar on the left to reveal the site navigation.</p>
                 <a href="https://neocities.org">What is Neocities?</a>
+            </article>
+        </section>
+        <section class="show" id="Snippets">
+            <article style="align-items: center;">
+                <h2>Code Snippets</h2>
+                <p>Web things that did not make it into other projects.</p>
+                <h3>CSS Solar System</h3>
+                <p>It's not entirely accurate and I took some liberties with guessing relative speeds.
+                    Best viewed in lighter themes like <span class="highlight"
+                        onclick="toggleTheme('gruvbox')">Gruvbox</span>, and <span class="highlight"
+                        onclick="toggleTheme('ermine')">Ermine</span>.</p>
+                <div class="system">
+                    <div class="ring">
+                        <div class="orbit" id="⛢">
+                            <div class="planet">
+                            </div>
+                        </div>
+                        <div class="ring">
+                            <div class="orbit" id="♆">
+                                <div class="planet">
+                                </div>
+                            </div>
+                            <div class="ring">
+                                <div class="orbit" id="♄">
+                                    <div class="planet">
+                                    </div>
+                                </div>
+                                <div class="ring">
+                                    <div class="orbit" id="♃">
+                                        <div class="planet">
+                                        </div>
+                                    </div>
+                                    <div class="ring">
+                                        <div class="orbit" id="♂">
+                                            <div class="planet">
+                                            </div>
+                                        </div>
+                                        <div class="ring">
+                                            <div class="orbit" id="🜨">
+                                                <div class="planet">
+                                                </div>
+                                            </div>
+                                            <div class="ring">
+                                                <div class="orbit" id="♀">
+                                                    <div class="planet">
+                                                    </div>
+                                                </div>
+                                                <div class="ring">
+                                                    <div class="orbit" id="☿">
+                                                        <div class="planet">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>You can also get interesting affects by changing around the scaling values.</p>
+                <div class="system">
+                    <div class="ring_alt">
+                        <div class="orbit" id="⛢">
+                            <div class="planet">
+                            </div>
+                        </div>
+                        <div class="ring_alt">
+                            <div class="orbit" id="♆">
+                                <div class="planet">
+                                </div>
+                            </div>
+                            <div class="ring_alt">
+                                <div class="orbit" id="♄">
+                                    <div class="planet">
+                                    </div>
+                                </div>
+                                <div class="ring_alt">
+                                    <div class="orbit" id="♃">
+                                        <div class="planet">
+                                        </div>
+                                    </div>
+                                    <div class="ring_alt">
+                                        <div class="orbit" id="♂">
+                                            <div class="planet">
+                                            </div>
+                                        </div>
+                                        <div class="ring_alt">
+                                            <div class="orbit" id="🜨">
+                                                <div class="planet">
+                                                </div>
+                                            </div>
+                                            <div class="ring_alt">
+                                                <div class="orbit" id="♀">
+                                                    <div class="planet">
+                                                    </div>
+                                                </div>
+                                                <div class="ring_alt">
+                                                    <div class="orbit" id="☿">
+                                                        <div class="planet">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
         <section class="show" id="Projects">
@@ -200,8 +316,8 @@
                         src="/assets/image/buttons/arlita.gif"></a>
                 <a class="buttonLink" href="https://omnipresence.neocities.org"><img
                         src="/assets/image/buttons/omni.gif"></a>
-                        <a class="buttonLink" href="https://tilde.team/~zinricky/"><img
-                            src="assets/image/buttons/zinbutton.png"></a>
+                <a class="buttonLink" href="https://tilde.team/~zinricky/"><img
+                        src="assets/image/buttons/zinbutton.png"></a>
                 <h2>Other</h2>
                 <a class="buttonLink"> <img src="/assets/image/buttons/drpepperbutton.gif"></a>
                 <a class="buttonLink"> <img src="/assets/image/buttons/socks.gif"></a>
@@ -214,6 +330,13 @@
             <article>
                 <h2>Changelog</h2>
                 <p>Formatted in MDY.</p>
+                <h3>2/17/24</h3>
+                <ul>
+                    <li>Added <a href="#Snippets">Snippets</a> page.</li>
+                    <li>Added more themes.</li>
+                    <li>Added starring system.</li>
+                    <li>Changed youtube Iframe to be a thumbnail and redirect.</li>
+                </ul>
                 <h3>2/14/24</h3>
                 <ul>
                     <li>A small bit of button reorganization.</li>
@@ -263,12 +386,10 @@
                 <img src="assets/image/projects/viral/wrench.gif">
                 <img src="assets/image/projects/viral/pipeshotgun.gif">
                 <figcaption>Spritework by soooupe</figcaption>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/gGWqjp-7jFg?si=jKQ1qhaaaft0oDNr"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                <a class="imgLink" href="https://www.youtube.com/watch?v=gGWqjp-7jFg"><img style="width: 100%; height: 100%;"
+                        src="https://i.ytimg.com/vi/gGWqjp-7jFg/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgUyhiMA8=&rs=AOn4CLANvqjQqbcvCFEtPoJn7t1CH_1u6A"></a>
                 <figcaption>Dogshop by roachie</figcaption>
-                <video preload="none" ;
+                <video preload="none";
                     src="https://dl.dropbox.com/scl/fi/9zsux1vm7q0jp4cv7kzvv/viraladcampaign.mp4?rlkey=k7pn90j88vi10nj1ht91lm06u&amp;dl=0"
                     controls="on"></video>
                 <figcaption>A masterpiece by Vomit Monster??</figcaption>
@@ -362,4 +483,5 @@
     <script src="/assets/js/lazyloading.js"></script>
     <script data-goatcounter="https://koyo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
+
 </html>

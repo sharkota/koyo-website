@@ -1,0 +1,16 @@
+/*Theme*/
+:root {
+    --primary-color: #211e29;
+    --secondary-color: #19171d;
+    --tertiary-color: #ff4500;
+    --text-color: #ff4500;
+    --highlight-color: #ff4500; 
+    --accent-inactive: #ff4500;
+    --accent-active: #ff4500;
+}
+
+
+
+button {
+    color: var(--text-color);
+}

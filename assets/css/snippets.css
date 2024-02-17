@@ -1,0 +1,138 @@
+/* Planetarium */
+.system{
+    z-index: 500;
+    width: 35rem;
+    height: 35rem;
+    display: block;
+    margin-right: 2.2%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+.ring{
+    color: var(--text-color);
+    box-shadow: inset 0 0 0.75em var(--text-color);
+    border: 0.5rem solid;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+}
+
+.ring>.ring{
+position: relative;
+top: -101.5%;
+left: -1.5%;
+scale: 0.8;
+}
+
+.ring_alt{
+    color: var(--text-color);
+    box-shadow: inset 0 0 0.75em var(--text-color);
+    border: 0.5rem solid;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+}
+
+.ring_alt>.ring_alt{
+position: relative;
+top: -101.5%;
+left: -20.5%;
+scale: 0.8;
+}
+
+.orbit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation: rotation 3.16s linear infinite;
+}
+
+.planet{
+    border-radius: 100%;
+    border: 0.4rem solid;
+    box-shadow: inset 0 0 0.75em var(--text-color);
+    background-color: white;
+    width: 10%;
+    height: 10%;
+    margin-left: -6.6%;
+    z-index: 50;
+    pointer-events: all;
+}
+
+#☿ .planet{
+    scale: 0.8;
+}
+
+#♀ .planet{
+    background-color: #b36d24;
+}
+#♀{
+    animation: rotation 5.39s linear infinite;
+}
+
+#🜨{
+    animation: rotation 5.52s linear infinite reverse;
+}
+
+#🜨 .planet{
+    scale: 0.85;
+    background-color: skyblue;
+}
+
+#♂ .planet{
+    scale: 0.7;
+    background-color: #ac4222;
+}
+
+#♂{
+    animation: rotation 6.21s linear infinite;
+}
+
+#♃ .planet{
+    background-color: #bd8439;
+}
+
+#♃{
+    animation: rotation 17.56s linear infinite;
+}
+
+#♄ .planet{
+    background-color: #efc385;
+}
+
+#♄{
+    animation: rotation 25.49s linear infinite;
+}
+
+#⛢ .planet{
+    background-color: #3e66e1;
+    scale: 0.3;
+}
+
+#⛢{
+    animation: rotation 30.54s linear infinite;
+}
+
+#♆ .planet{
+    background-color: #add5d6;
+    scale: 0.5;
+    animation-timeline: 500;
+}
+
+#♆{
+    animation: rotation 35s linear infinite;
+}
+
+/* Animations */
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg)
+    }
+}

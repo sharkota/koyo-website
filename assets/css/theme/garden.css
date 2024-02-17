@@ -1,0 +1,18 @@
+/*Theme*/
+:root {
+    --primary-color: #9dd8d6;
+    --secondary-color: #008080;
+    --tertiary-color: #005959;
+    --text-color: white;
+    --highlight-color: #005959;
+    --accent-inactive: #005959;
+    --accent-active: #9dd8d6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-inactive);
+}
+
+button {
+    color: var(--text-color);
+}
