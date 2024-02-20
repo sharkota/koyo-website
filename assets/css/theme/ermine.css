@@ -11,3 +11,8 @@
     --header: #2e3037;
     --quote-background: #3bdd9f0f;
 }
+
+.ring, .ring_alt{
+    color: var(--text-color) !important;
+    box-shadow: inset 0 0 0.75em var(--text-color) !important;
+  }

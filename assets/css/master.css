@@ -19,9 +19,9 @@ Hewwo fren!!! */
 
 body {
   background-image: var(--bg-img);
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-position: right bottom;
-  background-size: cover;
+  background-size: cover; */
   background-color: var(--primary-color);
   /* background-image: url(/assets/image/photography/lake.jpg); */
   color: var(--text-color);
@@ -68,6 +68,7 @@ a h6:hover,
 p a:hover,
 li a:hover,
 nav a:hover,
+.highlight:hover,
 .button:hover {
   opacity: 30%;
 }
@@ -305,6 +306,11 @@ button:before {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 #mainNav{

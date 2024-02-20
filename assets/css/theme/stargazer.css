@@ -1,0 +1,14 @@
+/*Theme*/
+:root {
+    --primary-color:#152138;
+    --secondary-color: #0d1625;
+    --tertiary-color: #1A1B26;
+    --text-color: white;
+    --highlight-color: var(--accent-active);
+    --accent-inactive: #59acb5;
+    --accent-active: #345189;
+    --link-color: var(--accent-active);
+    --header: white;
+    --quote-background: #3bdd9f0f;
+    --bg-img: url(/kard/assets/image/stars.gif);
+}

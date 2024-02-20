@@ -4,6 +4,7 @@ const elements = document.querySelectorAll(".show");
 const hashNavList = document.querySelectorAll("nav a");
 var navString = ('[href="#' + hashLocation + '"]')
 var hashLocaationNav = document.querySelectorAll(navString);
+var home_string = document.getElementById("nav_script").getAttribute("data-home");
 
 // Set up page for hidden sections.
 document.documentElement.style.setProperty('--js', 'none');
@@ -11,7 +12,7 @@ document.documentElement.style.setProperty('--jsButton', 'block');
 
 // Set Home on no hash.
 if (hashLocation == "") {
-    document.location.hash = "#Home"
+    document.location.hash = (home_string)
 }
 
 // Toggle Show on hash changes.

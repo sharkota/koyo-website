@@ -16,3 +16,8 @@
 button {
     color: var(--text-color);
 }
+
+.ring, .ring_alt{
+    color: var(--accent-inactive) !important;
+    box-shadow: inset 0 0 0.75em var(--accent-inactive) !important;
+  }

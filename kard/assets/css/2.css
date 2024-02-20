@@ -24,6 +24,7 @@
   .horizkard-banner {
     max-width: 100%;
     margin-left: 0px;
+    background-image: url(/kard/assets/image/stars.gif);
   }
 
   .horizkard-top {
@@ -52,7 +53,7 @@ body {
 
 body {
   /* background-color: rgb(57, 64, 128); */
-  background-color: #080808;
+  background-image: url(/kard/assets/image/stars.gif);
   color: white;
   font-family: Monospace;
   display: flex;
@@ -60,6 +61,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
+  transition-duration: 0.5s;
+  animation: fade-in 2s ease 0s 1 none;
 }
 
 /* formatting */
@@ -113,7 +116,7 @@ h6 {
 hr {
   height: 3px;
   width: 100%;
-  background-color: #262729;
+  background-color: #0000001c;
   border: none;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -122,6 +125,12 @@ hr {
 section {
   width: 100%;
   margin-bottom: 2%;
+}
+
+svg{
+  color: #0d1625 !important;
+  fill: #0d1625 !important;
+  stroke: #0d1625 !important;
 }
 
 .row {
@@ -142,7 +151,7 @@ section {
   float: left;
   max-height: 7rem;
   max-width: 7rem;
-  background-color: #131212;
+  background-color: #152138;
 }
 
 .squishContent {
@@ -185,7 +194,7 @@ section {
   text-align: center;
   font-size: 20px;
   border-radius: 10px 10px 0 0;
-  background-color: #131212;
+  background-color: #152138;
   text-decoration: none;
   color: white;
   margin: auto;
@@ -199,7 +208,7 @@ section {
   text-align: left;
   font-size: 20px;
   border-radius: 0px 0px 10px 10px;
-  background-color: #191919;
+  background-color: #0d1625;
   text-decoration: none;
   color: white;
   margin: auto;
@@ -226,14 +235,14 @@ select {
 /*links */
 
 a:link {
-  color: #b23853;
+  color: #345189;
   background-color: transparent;
   text-decoration: underline;
   text-align: center;
 }
 
 a:visited {
-  color: #b23853;
+  color: #345189;
   background-color: transparent;
   text-decoration: underline;
   text-align: center;
@@ -242,4 +251,44 @@ a:visited {
 /*other */
 ::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

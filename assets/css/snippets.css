@@ -1,4 +1,9 @@
 /* Planetarium */
+.ring, .ring_alt{
+    color: var(--primary-color);
+    box-shadow: inset 0 0 0.75em var(--primary-color);
+  }
+
 .system{
     z-index: 500;
     width: 35rem;
@@ -10,8 +15,6 @@
 }
 
 .ring{
-    color: var(--text-color);
-    box-shadow: inset 0 0 0.75em var(--text-color);
     border: 0.5rem solid;
     border-radius: 100%;
     width: 100%;
@@ -28,8 +31,6 @@ scale: 0.8;
 }
 
 .ring_alt{
-    color: var(--text-color);
-    box-shadow: inset 0 0 0.75em var(--text-color);
     border: 0.5rem solid;
     border-radius: 100%;
     width: 100%;
@@ -110,22 +111,22 @@ scale: 0.8;
     animation: rotation 25.49s linear infinite;
 }
 
-#⛢ .planet{
+#♆ .planet{
     background-color: #3e66e1;
     scale: 0.3;
 }
 
-#⛢{
+#♆{
     animation: rotation 30.54s linear infinite;
 }
 
-#♆ .planet{
+#⛢ .planet{
     background-color: #add5d6;
     scale: 0.5;
     animation-timeline: 500;
 }
 
-#♆{
+#⛢{
     animation: rotation 35s linear infinite;
 }
 

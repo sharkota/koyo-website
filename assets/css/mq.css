@@ -43,4 +43,7 @@
     .system{
         scale: 0.5;
     }
+    .flex-row{
+        flex-direction: column;
+    }
    }
